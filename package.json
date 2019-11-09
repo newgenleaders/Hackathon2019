@@ -1,0 +1,24 @@
+{
+  "name": "Hackathon2019",
+  "version": "1.0.0",
+  "description": "Solução para construção civil\r Nome do projeto: Constrack\r Descrição:\r Otimização de controle e logística para a obra",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newgenleaders/Hackathon2019.git"
+  },
+  "keywords": [], 
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newgenleaders/Hackathon2019/issues"
+  },
+  "homepage": "https://github.com/newgenleaders/Hackathon2019#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
