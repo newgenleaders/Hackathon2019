@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <link rel='stylesheet' href="./main.css" >
+  <link rel='stylesheet' href="../css/main.css" >
   
 <body>
+ <header></header>
  
-    <div class="card">
-      <span>USER1</span>
-      <br/><br/>
-      <span>USER2</span>
-      <br/><br/>
-      <span>USER3</span>
-      <br/><br/>
-      <span>USER4</span>
-      <br/><br/>
-      <span>USER5</span>
-       <br/><br/>
-      <span>USER6</span>
-
-    </div>
+ <section class="card">
+    <div class="usuarios">
+        <span>USER1</span>
+        <br/><br/>
+        <span>USER2</span>
+        <br/><br/>
+        <span>USER3</span>
+        <br/><br/>
+        <span>USER4</span>
+        <br/><br/>
+        <span>USER5</span>
+         <br/><br/>
+        <span>USER6</span>
+  
+      </div>
+ </section>
+ <footer></footer>
+    
 	
 <!--<p id="demo">Clique no botão para obter sua localização:</p>-->
 
@@ -26,8 +31,6 @@
 <script>
 var x=document.getElementById("demo");
  
-
-
 function getLocation()
   {
   if (navigator.geolocation)
@@ -36,8 +39,6 @@ function getLocation()
     }
   else{x.innerHTML="Geolocalização não é suportada nesse browser.";}
   }
-
-
  
 function showPosition(position)
   {
@@ -51,7 +52,6 @@ function showPosition(position)
   mapholder.style.marginTop='15px';
   mapholder.style.position='fixed';
   mapholder.style.border='1px solid #000000'
-
  
   var myOptions={
   center:latlon,zoom:14,
@@ -88,5 +88,3 @@ function showError(error)
 
 </body>
 </html>
-
-
