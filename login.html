@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" type="/text/css/" href="/css/styles.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Hackathon2019</title>
-   <style>
+  <!-- <style>
       @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
       body{ 
             background: #bdd4ff;            
            }            
-
         h1{
             font-family: 'Open Sans', sans-serif;
             color: #5513a1 ;
             font-size: 35px;
             }
-
        div {
             bottom: 50px;
             font-family: 'Open Sans', sans-serif;
@@ -42,7 +41,6 @@
             border: 2px;
             margin-top: 20px;
             }
-
       input{
             border-radius: 7px;
             border: 25px;
@@ -54,12 +52,16 @@
             color: #450c86 ;
             margin-bottom: 4px;   
             }
-    </style>   
+    </style>-->
 
 </head>
 <body>
    <!-- Objetos para login do usuário--> 
-        <div class="Login" Align = "Center">
+   <header>
+
+   </header>
+   <section class="singout">  
+       <div class="Login">
                 <h1 Align ="center" > LOGIN </h1>   
                    <p>Usuário:</p>
                    <input type="text" id="UserLogin" name="User">  
@@ -70,6 +72,12 @@
                    <button type="button" class="botao2" onclick="Cadastro()">Cadastrar</button>
                  <h6><a href="esqueciMinhaSenha">Esqueci minha senha </a></h6>                  
         </div>
+    </section>
+
+   <form action="">
+
+   </form>
+      
   
     <!-- Interações com o usuário  para tratar login-->
     <script>
@@ -80,7 +88,6 @@
                 usuario=usuario.toLowerCase();
                 var senha= document.getElementsByName('Pass')[0].value;
                 senha=senha.toLowerCase();
-
                 if (usuario==""){ window.alert("Informe o usuário!");
                 return false;
                 }
