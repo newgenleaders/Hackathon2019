@@ -1,117 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/login.css">
-    <title>Hackathon2019</title>
-  <!-- <style>
-      @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
-      body{ 
-            background: #bdd4ff;            
-           }            
-        h1{
-            font-family: 'Open Sans', sans-serif;
-            color: #5513a1 ;
-            font-size: 35px;
-            }
-       div {
-            bottom: 50px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 20px;        
-            width: 375px;
-            height: 440px;
-            border-width: 3px;
-            border-color: #5513a1;
-            border-style: solid;
-            display: -ms-inline-grid;
-            border-radius: 40px 10px;
-            justify-content: center;
-            flex-direction: row;
-            align-items: center;
-           }
-     
-           button{                   
-            width: 90px;
-            height: 30px;
-            background: #8db6d1;
-            border-radius: 7px;           
-            border: 2px;
-            margin-top: 20px;
-            }
-      input{
-            border-radius: 7px;
-            border: 25px;
-            width: 200px;
-            height: 30px;
-            margin-bottom: -10px;
-            }
-          p{
-            color: #450c86 ;
-            margin-bottom: 4px;   
-            }
-    </style>-->
-
+<meta charset=utf-8 />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<title>Chart JS - Gr�ficos em JavaScript com legendas</title>
+<link href="css/demo.css" rel="stylesheet" type="text/css">
+<script src="vendor/Chart.js"></script>
+<script src="src/legend.js"></script>
+<script src="src/demo.js"></script>
 </head>
 <body>
-   <!-- Objetos para login do usuário--> 
-   <header>
-
-   </header>
-   <section class="singout">  
-       <div class="Login">
-                <h1 Align ="center" > LOGIN </h1>   
-                   <p>Usuário:</p>
-                   <input type="text" id="UserLogin" name="User">  
-
-                   <p>Senha:</p>
-                   <input type="password" id="passwordLogin" name="Pass"><br>
-                   <button type="button" class="botao1" onclick="Login()">Acessar</button>
-                   <button type="button" class="botao2" onclick="Cadastro()">Cadastrar</button>
-                 <h6><a href="esqueciMinhaSenha">Esqueci minha senha </a></h6>                  
-        </div>
-    </section>
-
-   <form action="">
-
-   </form>
-      
-  
-    <!-- Interações com o usuário  para tratar login-->
-    <script>
-           // Função para tratar login 
-            function Login() {
-                var Access=0;
-                var usuario = document.getElementsByName('User')[0].value;
-                usuario=usuario.toLowerCase();
-                var senha= document.getElementsByName('Pass')[0].value;
-                senha=senha.toLowerCase();
-                if (usuario==""){ window.alert("Informe o usuário!");
-                return false;
-                }
-                
-                if (senha==""){ window.alert('Informe sua senha!');
-                return false;    
-                }
-                
-                //Aqui será consultado no banco os dados do usuario
-                if (usuario=="admin" && senha=="admin") {  
-                    window.location="main.html";
-                    Access=1;
-                }
-                if (Access==0) { alert("Usuário ou Senha incorretos, por favor tente novamente!"); }
-            }
-           
-            // Função para cadastrar novo usuário
-            function Cadastro(){
-                window.alert("Formulário em construção.")
-                return false; 
-            }
-    </script>
-
-    <br>
-
+<h1>Chart.js Com legendas</h1>
+<h2>Line</h2>
+<hr>
+<div>
+    <canvas id="lineChart" width="600" height="400"></canvas>
+    <div id="lineLegend"></div>
+</div>
+<br><br><br>
+<h2>Bars</h2>
+<hr>
+<div>
+    <canvas id="barsChart" width="600" height="400"></canvas>
+    <div id="barsLegend"></div>
+</div>
+<br><br><br>
+<h2>Pizza</h2>
+<hr>
+<div>
+    <canvas id="pieChart" width="600" height="400"></canvas>
+    <div id="pieLegend"></div>
+</div>
+<br><br><br>
+<h2>Rosquinha</h2>
+<hr>
+<div>
+    <canvas id="doughnutChart" width="600" height="400"></canvas>
+    <div id="doughnutLegend"></div>
+</div>
+<br><br><br>
+<h2>Polar Area</h2>
+<hr>
+<div>
+    <canvas id="polarChart" width="600" height="400"></canvas>
+    <div id="polarLegend"></div>
+</div>
+<br><br><br>
+<h2>Radar Area</h2>
+<hr>
+<div>
+    <canvas id="radarChart" width="200" height="100"></canvas>
+    <div id="radarLegend"></div>
+</div>
 </body>
 </html>
