@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
@@ -27,29 +29,7 @@
     crossorigin="anonymous"></script>
 
 
-  <!--
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
-    google.charts.load('current', { packages: ['corechart'] });
-    google.charts.setOnLoadCallback(drawChart);
 
-    function drawChart() {
-      // Define the chart to be drawn.
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Element');
-      data.addColumn('number', 'Percentage');
-      data.addRows([
-        ['Nitrogen', 0.78],
-        ['Oxygen', 0.21],
-        ['Other', 0.01]
-      ]);
-
-      // Instantiate and draw the chart.
-      var chart = new google.visualization.PieChart(document.getElementById('myPieChart'));
-      chart.draw(data, null);
-    }
-  </script>
--->
 
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
@@ -58,26 +38,25 @@
 
     function drawStuff() {
       var data = new google.visualization.arrayToDataTable([
-        ['Opening Move', 'Percentage'],
-        ["King's pawn (e4)", 44],
-        ["Queen's pawn (d4)", 31],
-        ["Knight to King 3 (Nf3)", 12],
-        ["Queen's bishop pawn (c4)", 10],
-        ['Other', 3]
+        ['Placa Veiculos', 'Percentage'],
+        ["GCU-4562  ", 100],
+        ["XCW-3541  ", 85],
+        ["QUM-0697  ", 62]
       ]);
 
       var options = {
-        title: 'Chess opening moves',
+        title: 'Consumo De gasolina',
         width: 900,
+        height: 360,
         legend: { position: 'none' },
         chart: {
-          title: 'Chess opening moves',
-          subtitle: 'popularity by percentage'
+          title: 'Consumo De gasolina'
+
         },
         bars: 'horizontal', // Required for Material Bar Charts.
         axes: {
           x: {
-            0: { side: 'top', label: 'Percentage' } // Top x-axis.
+            0: { side: 'top', label: 'Litros Consumidos' } // Top x-axis.
           }
         },
         bar: { groupWidth: "90%" }
