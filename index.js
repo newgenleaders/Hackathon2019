@@ -7,7 +7,7 @@ app.engine("handlebars", handlebars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.render("login");
 });
 
 app.get("/rotas", (req, res) => {
