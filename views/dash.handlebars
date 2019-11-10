@@ -1,27 +1,39 @@
-<canvas id="myChart"></canvas>
+<div class="container-fluid">
+
+  <nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">
+      <img src="./constrackLogo.jpeg" class="img-thumbnail">
+      ConsTrack</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar"
+      aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="textoNavbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Rotas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Graficos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+
+    <div class="col-sm-2">
+
+    </div>
+
+    <div class="col-sm-4">
+      <div id="top_x_div" style="width: 900px; height: 500px;"></div>
+    </div>
 
 
+  </div>
 
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0">
-
-  var ctx = document.getElementById('myChart').getContext('2d');
-  var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
-
-    // The data for our dataset
-    data: {
-      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-      datasets: [{
-        label: 'My First dataset',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45]
-      }]
-    },
-
-    // Configuration options go here
-    options: {}
-  });
-</script>
+</div>
