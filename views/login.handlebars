@@ -1,120 +1,60 @@
-<style>
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+<title>Hackathon2019</title>
 
-  body {
-    margin-top: 5%;
-    width: 100%;
-    height: 50%;
-    background-color: #F2F2F2;
-  }
+<!-- Objetos para login do usuário-->
+<header>
 
-  .get {
-    margin-top: 5px;
-    margin-left: 50px;
-    position: relative;
-    margin-bottom: 100%;
-  }
+</header>
+<section class="singout">
+  <div class="Login">
+    <h1 class="h1" Align="center"> LOGIN </h1>
+    <p>Usuário:</p>
+    <input type="text" id="UserLogin" name="User">
 
-  .card {
-    text-align: left;
-    margin-left: 10%;
-  }
+    <p>Senha:</p>
+    <input type="password" id="passwordLogin" name="Pass"><br>
+    <button type="button" class="botao1" onclick="Login()">Acessar</button>
+    <button type="button" class="botao2" onclick="Cadastro()">Cadastrar</button>
+    <h6><a href="esqueciMinhaSenha">Esqueci minha senha </a></h6>
+  </div>
+</section>
 
-  .card .usuarios {
-    /*border: 2px solid #000000;
-    width: 35%;
-    height:43%;
-    background-color: #D8D8D8;
-    margin-left: 60%;
-    align-items: center;
-    position: fixed;
-    border-radius: 9%;*/
+<form action="">
+
+</form>
 
 
-    bottom: 50px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    width: 205px;
-    height: 440px;
-    border-width: 6px;
-    border: 2px solid #000000;
-    background-color: #D8D8D8;
-    border-style: solid;
-    display: -ms-inline-grid;
-    border-radius: 40px 10px;
-    justify-content: center;
-    flex-direction: row;
-    border-radius: 10%;
-
-
-  }
-
-  .card .usuarios span {
-    text-align: center;
-    font-size: 200%;
-    font: bold;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-</style>
-
-</head>
-
-<body>
-  <!-- Objetos para login do usuário-->
-  <header>
-
-  </header>
-  <section class="singout">
-    <div class="Login">
-      <h1 Align="center"> LOGIN </h1>
-      <p>Usuário:</p>
-      <input type="text" id="UserLogin" name="User">
-
-      <p>Senha:</p>
-      <input type="password" id="passwordLogin" name="Pass"><br>
-      <button type="button" class="botao1" onclick="Login()">Acessar</button>
-      <button type="button" class="botao2" onclick="Cadastro()">Cadastrar</button>
-      <h6><a href="esqueciMinhaSenha">Esqueci minha senha </a></h6>
-    </div>
-  </section>
-
-  <form action="">
-
-  </form>
-
-
-  <!-- Interações com o usuário  para tratar login-->
-  <script>
-    // Função para tratar login 
-    function Login() {
-      var Access = 0;
-      var usuario = document.getElementsByName('User')[0].value;
-      usuario = usuario.toLowerCase();
-      var senha = document.getElementsByName('Pass')[0].value;
-      senha = senha.toLowerCase();
-      if (usuario == "") {
-        window.alert("Informe o usuário!");
-        return false;
-      }
-
-      if (senha == "") {
-        window.alert('Informe sua senha!');
-        return false;
-      }
-
-      //Aqui será consultado no banco os dados do usuario
-      if (usuario == "admin" && senha == "admin") {
-        window.location = "main.html";
-        Access = 1;
-      }
-      if (Access == 0) { alert("Usuário ou Senha incorretos, por favor tente novamente!"); }
-    }
-
-    // Função para cadastrar novo usuário
-    function Cadastro() {
-      window.alert("Formulário em construção.")
+<!-- Interações com o usuário  para tratar login-->
+<script>
+  // Função para tratar login 
+  function Login() {
+    var Access = 0;
+    var usuario = document.getElementsByName('User')[0].value;
+    usuario = usuario.toLowerCase();
+    var senha = document.getElementsByName('Pass')[0].value;
+    senha = senha.toLowerCase();
+    if (usuario == "") {
+      window.alert("Informe o usuário!");
       return false;
     }
-  </script>
 
-  <br>
+    if (senha == "") {
+      window.alert('Informe sua senha!');
+      return false;
+    }
+
+    //Aqui será consultado no banco os dados do usuario
+    if (usuario == "admin" && senha == "admin") {
+      window.location = "./rotas";
+      Access = 1;
+    }
+    if (Access == 0) { alert("Usuário ou Senha incorretos, por favor tente novamente!"); }
+  }
+
+  // Função para cadastrar novo usuário
+  function Cadastro() {
+    window.alert("Formulário em construção.")
+    return false;
+  }
+</script>
+
+<br>
