@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" type="text/css/" href="/css/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hackathon2019</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
-      body{ 
+    <link rel="stylesheet" href="../Hackathon2019/styles.css">
+    <title>ConsTrack</title>
+  <style>
+ @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+      /* body{ 
             background: #bdd4ff;            
-           }            
+           } 
 
         h1{
             font-family: 'Open Sans', sans-serif;
@@ -18,7 +18,17 @@
             font-size: 35px;
             }
 
-       div {
+    .singout{
+            width: 100%;
+            max-width: 300px;
+            margin: auto;
+            padding: 100px;
+            border-radius: 15%;
+            
+            }
+
+     .singout  .Login {
+            text-align: center;
             bottom: 50px;
             font-family: 'Open Sans', sans-serif;
             font-size: 20px;        
@@ -31,10 +41,9 @@
             border-radius: 40px 10px;
             justify-content: center;
             flex-direction: row;
-            align-items: center;
            }
      
-           button{                   
+      button{                   
             width: 90px;
             height: 30px;
             background: #8db6d1;
@@ -50,37 +59,48 @@
             height: 30px;
             margin-bottom: -10px;
             }
+
           p{
             color: #450c86 ;
             margin-bottom: 4px;   
             }
-    </style>  
+             */
+    </style>
 
 </head>
 <body>
    <!-- Objetos para login do usuário--> 
-        <div class="Login" Align = "Center">
+   <header>
+     <img class="ImagemLogin" Align="Center"  src="../Hackathon2019/logo.png" alt="logoLogin" width=60 height=40>
+   </header>   
+   <section class="singout">          
+       <div class="Login">
                 <h1 Align ="center" > LOGIN </h1>   
-                   <p>Usuário:</p>
+                   <p>Usuário</p>
                    <input type="text" id="UserLogin" name="User">  
 
-                   <p>Senha:</p>
+                   <p>Senha</p>
                    <input type="password" id="passwordLogin" name="Pass"><br>
+                   <!-- <button type="button" class="botao1" onclick="Login()">Acessar</button> -->
                    <button type="button" class="botao1" onclick="Login()">Acessar</button>
-                   <button type="button" class="botao2" onclick="Cadastro()">Cadastrar</button>
-                 <h6><a href="esqueciMinhaSenha">Esqueci minha senha </a></h6>                  
+                 <h6><a href="esqueciMinhaSenha">Esqueci minha senha </a></h6> 
         </div>
+    </section>
+
+   <form action="">
+
+   </form>
+      
   
     <!-- Interações com o usuário  para tratar login-->
     <script>
            // Função para tratar login 
-            function Login() {
+            function Login(){
                 var Access=0;
                 var usuario = document.getElementsByName('User')[0].value;
                 usuario=usuario.toLowerCase();
                 var senha= document.getElementsByName('Pass')[0].value;
                 senha=senha.toLowerCase();
-
                 if (usuario==""){ window.alert("Informe o usuário!");
                 return false;
                 }
@@ -99,8 +119,10 @@
            
             // Função para cadastrar novo usuário
             function Cadastro(){
+                const usuario = (window.prompt("Informe o usuário:"))
+                const senha = (window.prompt("Informe a senha:"))
                 window.alert("Formulário em construção.")
-                return false;
+                return false; 
             }
     </script>
 
