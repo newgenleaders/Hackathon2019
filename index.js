@@ -7,7 +7,7 @@ app.engine("handlebars", handlebars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.render("login");
 });
 
 app.get("/rotas", (req, res) => {
@@ -18,4 +18,4 @@ app.get("/dash", (req, res) => {
   res.render("dash");
 });
 
-app.listen(8080, () => console.log(`server iniciado`));
+app.listen(8081, () => console.log(`server iniciado`));

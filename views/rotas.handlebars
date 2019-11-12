@@ -1,0 +1,173 @@
+<div class="container-fluid">
+
+  <nav class="navbar navbar-dark bg-primary">
+
+    <a class="navbar-brand" href="#">
+
+      cons<b> TRACK</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar"
+      aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="textoNavbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Rotas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dash">Graficos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="row">
+    <div class="col-sm-2">
+
+    </div>
+
+    <div class="col-sm-4">
+      <form>
+        <div class="form-group">
+          <h5>Inserir nova rota:</h5>
+          <label for="exampleInputEmail1">Veiculos</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Seu email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Endereço</label>
+          <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Endereço">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Responsavel</label>
+          <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Responsavel">
+        </div>
+        <button type="submit" class="btn btn-primary">Inserir</button>
+      </form>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+
+
+    <div class="col-sm-2">
+
+    </div>
+
+    <div class="col-sm-2">
+      <br>
+      <h6>Lista de Veiculos:</h6>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          GCU-4562
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" onclick="getLocation()" href="#">Gerson</a>
+
+        </div>
+      </div>
+      <br>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          XCW-3541
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#" onclick="getLocation()">Joesley</a>
+
+        </div>
+      </div>
+
+      <br>
+
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          QUM-0697
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" onclick="getLocation()" href="#">Edson</a>
+
+        </div>
+      </div>
+
+      <br>
+
+    </div>
+
+    <div class="col-sm-2">
+
+    </div>
+
+    <div class="col-sm-4">
+
+      <div id="mapholder"></div>
+      <script src="http://maps.google.com/maps/api/js?key=AIzaSyDSxBUionUG1Jri6bAORk6fD6aqt35m7jU"></script>
+      <script>
+        var x = document.getElementById("demo");
+
+
+
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+          }
+          else { x.innerHTML = "Geolocalização não é suportada nesse browser."; }
+        }
+
+
+
+        function showPosition(position) {
+          lat = position.coords.latitude;
+          lon = position.coords.longitude;
+          latlon = new google.maps.LatLng(lat, lon)
+          mapholder = document.getElementById('mapholder')
+
+          mapholder.style.height = '400px';
+          mapholder.style.width = '600px';
+          mapholder.style.marginTop = '2px';
+          mapholder.style.position = 'fixed';
+          mapholder.style.border = '1px solid #000000'
+
+
+          var myOptions = {
+            center: latlon, zoom: 14,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeControl: false,
+            navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL }
+          };
+          var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
+          var marker = new google.maps.Marker({ position: latlon, map: map, title: "Você está Aqui!" });
+        }
+
+        function showError(error) {
+          switch (error.code) {
+            case error.PERMISSION_DENIED:
+              x.innerHTML = "Usuário rejeitou a solicitação de Geolocalização."
+              break;
+            case error.POSITION_UNAVAILABLE:
+              x.innerHTML = "Localização indisponível."
+              break;
+            case error.TIMEOUT:
+              x.innerHTML = "O tempo da requisição expirou."
+              break;
+            case error.UNKNOWN_ERROR:
+              x.innerHTML = "Algum erro desconhecido aconteceu."
+              break;
+          }
+        }
+      </script>
+
+
+    </div>
+  </div>
+</div>
