@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 const handlebars = require("express-handlebars");
@@ -18,4 +20,4 @@ app.get("/dash", (req, res) => {
   res.render("dash");
 });
 
-app.listen(8081, () => console.log(`server iniciado`));
+app.listen(process.env.PORT || 8081);
