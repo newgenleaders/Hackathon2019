@@ -1,4 +1,4 @@
-require("dotenv").config();
+/*require("dotenv").config();  */
 
 const express = require("express");
 const app = express();
@@ -20,4 +20,4 @@ app.get("/dash", (req, res) => {
   res.render("dash");
 });
 
-app.listen(process.env.PORT || 8081);
+app.listen(/*process.env.PORT ||*/ 8081);
